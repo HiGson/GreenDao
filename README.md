@@ -55,4 +55,6 @@ GreenDao使用和简单封装
     
     2、CommonUtils:操作数据表
     
-    官方API文档：http://greenrobot.org/files/greendao/javadoc/current/
+    官方API文档：
+    
+    http://greenrobot.org/files/greendao/javadoc/current/
