@@ -57,4 +57,6 @@ GreenDao使用和简单封装
     
     官方API文档：
     
-    http://greenrobot.org/files/greendao/javadoc/current/
+    DaoGenerator v3.1 API文档地址： http://greenrobot.org/files/greendao-generator/javadoc/3.1/
+    
+    GreenDao v3.1 API文档地址： http://greenrobot.org/files/greendao/javadoc/3.1/
