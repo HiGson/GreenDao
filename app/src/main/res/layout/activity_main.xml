@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="添加单条数据"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="insertSingleData"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:onClick="insertMultData"
+        android:text="添加多条数据"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="updateSingleData"
+        android:text="更新一条数据"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="根据主键查询单挑数据"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        android:onClick="querySingleDataByKey"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询所有数据"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        android:onClick="queryAllData"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="317dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="使用SQL语句查询数据"
+        app:layout_constraintEnd_toEndOf="@+id/button5"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        android:onClick="qureyDataBySql"/>
+
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:text="使用QueryBuilder构建查询条件"
+        app:layout_constraintEnd_toEndOf="@+id/button6"
+        app:layout_constraintStart_toStartOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        android:onClick="queryDataByBuilder"/>
+</android.support.constraint.ConstraintLayout>
