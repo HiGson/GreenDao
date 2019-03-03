@@ -54,3 +54,5 @@ GreenDao使用和简单封装
     1、DaoManager:管理数据库
     
     2、CommonUtils:操作数据表
+    
+    官方API文档：http://greenrobot.org/files/greendao/javadoc/current/
