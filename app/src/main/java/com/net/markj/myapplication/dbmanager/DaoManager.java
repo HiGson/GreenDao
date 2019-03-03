@@ -9,7 +9,7 @@ import org.greenrobot.greendao.query.QueryBuilder;
 
 /**
  * Created by Kron Xu on 2019/3/2 23:26
- * Description:
+ * Description: DaoGenerator v3.1 API文档地址：http://greenrobot.org/files/greendao-generator/javadoc/3.1/
  */
 public class DaoManager {
     private static DaoManager daoManager;

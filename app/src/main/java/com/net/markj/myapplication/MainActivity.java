@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.net.markj.myapplication.dbmanager.CommonUtil;
 import com.net.markj.myapplication.dbmanager.DaoManager;
+import com.student.dao.StudentDao;
 import com.student.entity.Student;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void insertSingleData(View view) {
         Student student = new Student();
-        student.setId(1l);
+//        student.setId(1L); //如果插入的数据设置了id(主键)，并且这个主键在表中已经存在会抛出异常
         student.setAddress("北京市昌平区");
         student.setAge(27);
         student.setNumber("10241010");
@@ -74,7 +75,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void queryDataByBuilder(View view) {
-        List<Student> students = commonUtil.queryDataByBuilder(9l, "北京市昌平区9");
+//        List<Student> students = commonUtil.queryDataByBuilder(9l, "北京市昌平区9");
+//        Log.v("--------->",students.toString());
+
+//        List<Student> students = commonUtil.queryDataByBuilder();
+//        Log.v("--------->",students.toString());
+
+        List<Student> students = commonUtil.queryDataByBuilder(Student.class, StudentDao.Properties.Id.gt(9),StudentDao.Properties.Address.notEq("北京市昌平区9"));
         Log.v("--------->",students.toString());
     }
+
+    public void queryOneOrMoreData(View view) {
+        List list = commonUtil.queryOneOrMoreData(Student.class,StudentDao.Properties.Age.ge(36),StudentDao.Properties.Id.lt(3));
+        Log.v("--------->",list.toString());
+    }
+
+    public void delSingleData(View view) {
+        Student student = new Student();
+        student.setId(7L);
+        commonUtil.deleteData(student);
+    }
+
+    public void delAllData(View view) {
+        commonUtil.deleteAllData(Student.class);
+    }
+
 }
